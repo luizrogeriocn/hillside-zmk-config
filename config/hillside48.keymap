@@ -5,11 +5,9 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27  // Left-hand keys.
@@ -113,131 +111,131 @@
 
         Grave {
             bindings = <&kp GRAVE>;
-            key-positions = <10 0>;
+            key-positions = <1 13>;
             layers = <0 2>;
         };
 
         forward_slash {
             bindings = <&kp SLASH>;
-            key-positions = <20 8>;
+            key-positions = <9 21>;
             layers = <0 2>;
         };
 
         at {
             bindings = <&kp AT>;
-            key-positions = <11 1>;
+            key-positions = <2 14>;
             layers = <0 2>;
         };
 
         hash {
             bindings = <&kp HASH>;
-            key-positions = <12 2>;
+            key-positions = <3 15>;
             layers = <0 2>;
         };
 
         dollar {
             bindings = <&kp DOLLAR>;
-            key-positions = <3 13>;
+            key-positions = <16 4>;
             layers = <0 2>;
         };
 
         percent {
             bindings = <&kp PERCENT>;
-            key-positions = <4 14>;
+            key-positions = <5 17>;
             layers = <0 2>;
         };
 
         caret {
             bindings = <&kp CARET>;
-            key-positions = <10 22>;
+            key-positions = <13 25>;
             layers = <0 2>;
         };
 
         ampersand {
             bindings = <&kp AMPERSAND>;
-            key-positions = <23 11>;
+            key-positions = <26 14>;
             layers = <0 2>;
         };
 
         asterisk {
             bindings = <&kp ASTERISK>;
-            key-positions = <24 12>;
+            key-positions = <27 15>;
             layers = <0 2>;
         };
 
         Lparen {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
             layers = <0 2>;
             require-prior-idle-ms = <175>;
         };
 
         Rparen {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <2 3>;
+            key-positions = <3 4>;
             layers = <0 2>;
             require-prior-idle-ms = <175>;
         };
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <25 13>;
+            key-positions = <16 28>;
             layers = <0 2>;
         };
 
         underline {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <19 7>;
+            key-positions = <21 9>;
             layers = <0 2>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <31 19>;
+            key-positions = <35 21>;
             layers = <0 2>;
         };
 
         Lbracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <6 7>;
+            key-positions = <7 8>;
             layers = <0 2>;
             require-prior-idle-ms = <175>;
         };
 
         Rbracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <7 8>;
+            key-positions = <8 9>;
             layers = <0 2>;
             require-prior-idle-ms = <175>;
         };
 
         lesser_than {
             bindings = <&kp LESS_THAN>;
-            key-positions = <30 18>;
+            key-positions = <33 19>;
             layers = <0 2>;
         };
 
         greater_than {
             bindings = <&kp GREATER_THAN>;
-            key-positions = <32 20>;
+            key-positions = <35 21>;
             layers = <0 2>;
         };
 
         plus {
             bindings = <&kp PLUS>;
-            key-positions = <26 14>;
+            key-positions = <29 17>;
             layers = <0 2>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <23 24>;
+            key-positions = <26 27>;
             layers = <0 2>;
         };
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <24 25>;
+            key-positions = <27 28>;
             layers = <0 2>;
         };
 
@@ -249,31 +247,25 @@
 
         bkspc {
             bindings = <&kp BACKSPACE>;
-            key-positions = <32 31>;
+            key-positions = <34 33>;
             layers = <0 2>;
             require-prior-idle-ms = <75>;
         };
 
-        gaming {
-            bindings = <&tog 1>;
-            key-positions = <28 16>;
-            layers = <0 1>;
-        };
-
         backslash {
             bindings = <&kp BACKSLASH>;
-            key-positions = <18 6>;
+            key-positions = <7 19>;
             layers = <0 2>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
-            key-positions = <33 21>;
+            key-positions = <36 22>;
         };
 
         double_quote {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <9 21>;
+            key-positions = <22 10>;
         };
     };
 
@@ -282,10 +274,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q               &kp W           &kp F               &kp P             &kp B                                            &kp J  &kp L             &kp U               &kp Y           &kp SINGLE_QUOTE    &none
-&none  &mt LEFT_CONTROL A  &mt LEFT_ALT R  &mt LEFT_COMMAND S  &mt LEFT_SHIFT T  &kp G                                            &kp M  &mt LEFT_SHIFT N  &mt LEFT_COMMAND E  &mt LEFT_ALT I  &mt LEFT_CONTROL O  &none
-&none  &kp Z               &kp X           &kp C               &kp D             &kp V    &kp ESC                      &kp ENTER  &kp K  &kp H             &kp COMMA           &kp DOT         &kp SLASH           &none
-                                                               &kp LALT          &kp TAB  &kp SPACE  &kp ESC    &mo 2  &mo 1      &mo 2  &mo 3
+&none  &kp Q               &kp W           &kp F               &kp P             &kp B                                             &kp J          &kp L             &kp U               &kp Y           &kp SINGLE_QUOTE    &none
+&none  &mt LEFT_CONTROL A  &mt LEFT_ALT R  &mt LEFT_COMMAND S  &mt LEFT_SHIFT T  &kp G                                             &kp M          &mt LEFT_SHIFT N  &mt LEFT_COMMAND E  &mt LEFT_ALT I  &mt LEFT_CONTROL O  &none
+&none  &kp Z               &kp X           &kp C               &kp D             &kp V           &kp ESC                  &kp TAB  &kp K          &kp H             &kp COMMA           &kp DOT         &kp SLASH           &none
+                           &mo 3                               &kp LCTRL         &kp LEFT_SHIFT  &kp SPACE  &mo 2  &mo 1  &mo 2    &kp BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -293,10 +285,10 @@
 
         symbols {
             bindings = <
-&none  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp GRAVE   &kp TILDE                                &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &none
-&none  &kp EXCL        &kp AT            &kp POUND             &kp DOLLAR  &kp PIPE                                 &kp BACKSLASH      &kp CARET         &kp AMPS               &kp ASTERISK       &kp COLON        &none
-&none  &kp QUESTION    &kp PLUS          &kp MINUS             &kp UNDER   &none      &none                  &none  &none              &kp EQUAL         &kp LESS_THAN          &kp GREATER_THAN   &kp SEMI         &none
-                                                               &none       &none      &none  &none    &none  &none  &none              &none
+&none  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp GRAVE   &kp TILDE                              &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &none
+&none  &kp EXCL        &kp AT            &kp POUND             &kp DOLLAR  &kp PIPE                               &kp BACKSLASH      &kp CARET         &kp AMPS               &kp ASTERISK       &kp COLON        &none
+&none  &kp QUESTION    &kp PLUS          &kp MINUS             &kp UNDER   &none      &none                &none  &none              &kp EQUAL         &kp LESS_THAN          &kp GREATER_THAN   &kp SEMI         &none
+                       &none                                   &none       &none      &none  &none  &none  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -304,10 +296,10 @@
 
         nav {
             bindings = <
-&none  &kp C_VOLUME_UP    &kp HOME        &kp UP_ARROW  &kp END     &kp PAGE_UP                                  &none  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &none   &none
-&none  &kp C_VOLUME_DOWN  &kp LEFT        &kp DOWN      &kp RIGHT   &kp PAGE_DOWN                                &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0  &none
-&none  &kp K_MUTE         &kp C_PREVIOUS  &kp C_PLAY    &kp C_NEXT  &none          &none                  &none  &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &none
-                                                        &none       &none          &none  &none    &none  &none  &none  &none
+&none  &kp C_VOLUME_UP    &kp HOME        &kp UP_ARROW  &kp END     &kp PAGE_UP                                &none  &kp NUMBER_7  &kp N8        &kp NUMBER_9  &none   &none
+&none  &kp C_VOLUME_DOWN  &kp LEFT        &kp DOWN      &kp RIGHT   &kp PAGE_DOWN                              &none  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0  &none
+&none  &kp K_MUTE         &kp C_PREVIOUS  &kp C_PLAY    &kp C_NEXT  &none          &none                &none  &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &none
+                          &none                         &none       &none          &none  &none  &none  &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -315,10 +307,10 @@
 
         adj_layer {
             bindings = <
-&none       &to 0         &to 1         &to 2         &none         &none                                               &none   &kp F11  &kp F12       &kp PRINTSCREEN  &ext_power EP_OFF  &ext_power EP_ON
-&sys_reset  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                        &none   &none    &none         &none            &none              &sys_reset
-&none       &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHIFT    &none         &bt BT_CLR                    &none   &none   &none    &out OUT_USB  &out OUT_BLE     &none              &bootloader
-                                                      &trans        &trans        &trans      &trans    &trans  &trans  &trans  &trans
+&none       &none         &to 1         &none         &none         &none                                             &none   &kp F11  &kp F12       &kp PRINTSCREEN  &ext_power EP_OFF  &ext_power EP_ON
+&sys_reset  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                      &none   &none    &none         &none            &none              &sys_reset
+&none       &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHIFT    &none         &bt BT_CLR                  &none   &none   &none    &out OUT_USB  &out OUT_BLE     &none              &bootloader
+                          &trans                      &trans        &trans        &trans      &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
